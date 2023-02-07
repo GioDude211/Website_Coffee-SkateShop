@@ -1,0 +1,1073 @@
+@charset "utf-8";
+
+/*
+Final Project
+Rise & Grind Coffee Skate Shop
+   
+   Author:Giovanni Vecchione
+   Date:5/10/22
+   
+   Filename: R&G_styles.css
+
+   This file contains the screen styles used with the 
+   Rise & Grind home page.
+
+
+*/
+
+/*Flex Layout Styles*/
+/*-----------------------HOME PAGE------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Permanent Marker", cursive;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    /*Change this to a grey*/ url(../images/pexels-tnarg-3152174.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.header nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s; /*this creates the slow appearance animation look*/
+}
+
+.nav-links ul li:hover::after {
+  /*this allows you to hover over the nav and it shows the lines*/
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff; /*Change this color in the future possible*/
+  position: absolute; /*may need to be relative*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 100px;
+}
+
+.text-box h2 {
+  color: #fff;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.text-box p {
+  margin: 10px 0 40px; /*may need to change to be more relative*/
+  font-size: 14px;
+  color: #fff;
+}
+
+/*this is the link box, rename this in the future*/
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 16px;
+  background: transparent;
+  position: relative;
+  cursor: pointer; /*this changes the mouse when hovered over the link box*/
+}
+
+/*this trick lets you change the color of the box when being hovered over the link*/
+.hero-btn:hover {
+  border: 1px solid #f47174;
+  background: #f47174;
+  transition: 1s;
+}
+
+.nav-links i {
+  display: none;
+}
+
+.header nav i {
+  display: none;
+}
+
+/*------------------------Footer--------------------------*/
+
+.footer-bar {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-bar ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.footer-bar ul li a {
+  color: #777;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-bar ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f47174;
+  display: block;
+  margin: auto;
+  transition: 0.5s; /*this creates the slow appearance animation look*/
+}
+
+.footer ul li:hover::after {
+  /*this allows you to hover over the nav and it shows the lines*/
+  width: 100%;
+}
+
+/*Mobile Styles: 0 - 700 pixels  may need to change this back to 480px
+--------------------------------
+*/
+
+@media only screen and (max-width: 700px) {
+  .text-box h1 {
+    font-size: 3em;
+  }
+
+  .text-box h2 {
+    color: #fff;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  /*this organizes the nav bar to be top down*/
+  .nav-links ul li {
+    display: block;
+  }
+
+  /*this is the red background behind the nav bar*/
+  .nav-links {
+    position: absolute;
+    background: linear-gradient(#f47174, #986426);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  .nav-links i {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .header nav i {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav {
+    background-color: transparent;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  /*----INCLUDES COFFEE PAGE/SKATESHOP PAGE/CONTACT US PAGE----*/
+
+  .row {
+    flex-direction: column;
+  }
+
+  .text-box-contact {
+    font-size: 0.625em;
+    margin-top: 6em;
+  }
+
+  .text-box-coffee {
+    font-size: 0.625em;
+    margin-top: 15em;
+  }
+
+  /*this organizes the nav bar to be top down*/
+  .nav-links-coffee ul li,
+  .nav-links-skateshop ul li,
+  .nav-links-contact ul li {
+    display: block;
+  }
+
+  /*this is the red background behind the nav bar*/
+  .nav-links-coffee,
+  .nav-links-skateshop,
+  .nav-links-contact {
+    position: absolute;
+    background: linear-gradient(#f47174, #986426);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  .nav-links-coffee i,
+  .nav-links-skateshop i,
+  .nav-links-contact i {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .header-coffee nav i,
+  .header-skateshop nav i,
+  .header-contact nav i {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav {
+    background-color: transparent;
+  }
+
+  .nav-links-coffee ul,
+  .nav-links-skateshop ul,
+  .nav-links-contact ul {
+    padding: 30px;
+  }
+
+  /*SKATESHOP PAGE - SCROLLBAR*/
+  .container {
+    height: 20em;
+    width: auto;
+  }
+}
+/*Tablet and Desktop Styles: 481 pixels and greater
+----------------------------------------------------
+*/
+@media only screen and (min-width: 701px) {
+  .header nav:hover {
+    background-color: #3f3f3f;
+    z-index: 999;
+    transition: 0.5s;
+  }
+
+  .header-coffee nav:hover {
+    background-color: #3f3f3f;
+    z-index: 999;
+    transition: 0.5s;
+  }
+
+  .header-skateshop nav:hover {
+    background-color: #3f3f3f;
+    z-index: 999;
+    transition: 0.5s;
+  }
+
+  .header-contact nav:hover {
+    background-color: #3f3f3f;
+    z-index: 999;
+    transition: 0.5s;
+  }
+
+  /*SKATESHOP PAGE - SCROLLBAR*/
+  .container {
+    height: 50em;
+    width: auto;
+  }
+}
+
+/*-----------------------Coffee Page------------------------*/
+
+.header-coffee {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    /*Change this to a grey*/ url(../images/pexels-bianca-gasparoto-1752806.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-coffee nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.header-coffee nav img {
+  width: 150px;
+}
+
+.nav-links-coffee {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links-coffee ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links-coffee ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links-coffee ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s; /*this creates the slow appearance animation look*/
+}
+
+.nav-links-coffee ul li:hover::after {
+  /*this allows you to hover over the nav and it shows the lines*/
+  width: 100%;
+}
+
+.text-box-coffee {
+  width: 90%;
+  color: #fff; /*Change this color in the future possible*/
+  position: absolute; /*may need to be relative*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box-coffee h1 {
+  margin-top: 25%;
+  font-size: 3.5em;
+}
+
+.text-box-coffee p {
+  margin: 10px 0 40px; /*may need to change to be more relative*/
+  font-size: 25px;
+  color: #fff;
+}
+
+/*this is the link box, rename this in the future*/
+.hero-btn-coffee {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer; /*this changes the mouse when hovered over the link box*/
+}
+
+/*this trick lets you change the color of the box when being hovered over the link*/
+.hero-btn-coffee:hover {
+  border: 1px solid #f47174;
+  background: #f47174;
+  transition: 1s;
+}
+
+.nav-links-coffee i {
+  display: none;
+}
+
+.header-coffee nav i {
+  display: none;
+}
+
+.coffee {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  background-color: #fff;
+}
+
+.coffee h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #3f3f3f;
+}
+
+.coffee p {
+  color: #fff; /*CHANGE THIS COLOR #6 ISSUE*/
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  font-family: sans-serif; /*CHANGE THIS FONT*/
+}
+
+#secondary {
+  color: #3f3f3f; /*CHANGE THIS COLOR #6 ISSUE*/
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  font-family: sans-serif; /*CHANGE THIS FONT*/
+}
+
+.coffee .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../images/coffeeBeansBackG.jpg);
+  background-size: cover;
+}
+
+.coffee-col {
+  flex-basis: 31%;
+  background-color: #f47174;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.coffee-col h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  font-size: 25px;
+  text-decoration: underline;
+  color: #3f3f3f;
+}
+
+.coffee-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+}
+
+/*-----------------------Skateshop Page---------------------*/
+
+.header-skateshop {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    /*Change this to a grey*/ url(../images/pexels-arnie-watkins-3773656.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-skateshop nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.header-skateshop nav img {
+  width: 150px;
+}
+
+.skateboards .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links-skateshop {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links-skateshop ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links-skateshop ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links-skateshop ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s; /*this creates the slow appearance animation look*/
+}
+
+.nav-links-skateshop ul li:hover::after {
+  /*this allows you to hover over the nav and it shows the lines*/
+  width: 100%;
+}
+
+.text-box-skateshop {
+  width: 90%;
+  color: #fff; /*Change this color in the future possible*/
+  position: absolute; /*may need to be relative*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: auto;
+}
+
+.text-box-skateshop h1 {
+  font-size: 3.5em;
+}
+
+.text-box-skateshop p {
+  margin: 10px 0 40px; /*may need to change to be more relative*/
+  font-size: 25px;
+  color: #fff;
+}
+
+/*this is the link box, rename this in the future*/
+.hero-btn-skateshop {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer; /*this changes the mouse when hovered over the link box*/
+}
+
+/*this trick lets you change the color of the box when being hovered over the link*/
+.hero-btn-skateshop:hover {
+  border: 1px solid #f47174;
+  background: #f47174;
+  transition: 1s;
+}
+
+.nav-links-skateshop i {
+  display: none;
+}
+
+.header-skateshop nav i {
+  display: none;
+}
+
+/*Skateboard Brands*/
+.skateboards h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.skateboards {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.skateboards-col {
+  /*This sections off the photo to be able to fit the image*/
+  flex-basis: 32%;
+  border-radius: 100px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skateboards-col img {
+  /*This tells the image to fit within the confines*/
+  width: 100%;
+  height: 100%; /*Note to self this stretches the images height to fit / match frame*/
+  display: block;
+}
+
+.layer {
+  /*Red overlay that makes the image red in when hovered*/
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: #f47174;
+  opacity: 0.7;
+}
+
+.layer h3 {
+  /*Text overlay on image*/
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  opacity: 0; /*This part lets you hide the text until the hover portion is selected*/
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  /*This part allows you to show the text within the image when hovered over*/
+  bottom: 49%;
+  opacity: 1;
+}
+
+/*Scroll Bar - Side scrolling images for products*/
+.super-container {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  height: 100%;
+  padding-top: 8em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 100%;
+  max-height: 750px;
+  overflow: hidden;
+}
+
+.myCarousel img {
+  width: 100%;
+  margin-top: -20%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background: #0000008c;
+  line-height: 30px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 12px 20px;
+  position: absolute;
+  top: 0;
+  background: #000000ba;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #3f3f3f;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*----------------------CONTACT US PAGE-----------------------------*/
+.header-contact {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    /*Change this to a grey*/ url(../images/pexels-tnarg-3152174.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-contact nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.header-contact nav img {
+  width: 150px;
+}
+
+.nav-links-contact {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links-contact ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links-contact li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links-contact ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s; /*this creates the slow appearance animation look*/
+}
+
+.nav-links-contact ul li:hover::after {
+  /*this allows you to hover over the nav and it shows the lines*/
+  width: 100%;
+}
+
+.text-box-contact {
+  width: 90%;
+  color: #fff; /*Change this color in the future possible*/
+  position: absolute; /*may need to be relative*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box-contact h1 {
+  font-size: 3em;
+}
+
+.text-box-contact p {
+  margin: 10px 0 40px; /*may need to change to be more relative*/
+  font-size: 14px;
+  color: #fff;
+}
+
+/*this is the link box, rename this in the future*/
+.hero-btn-contact {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 16px;
+  background: transparent;
+  position: relative;
+  cursor: pointer; /*this changes the mouse when hovered over the link box*/
+}
+
+/*this trick lets you change the color of the box when being hovered over the link*/
+.hero-btn-contact:hover {
+  border: 1px solid #f47174;
+  background: #f47174;
+  transition: 1s;
+}
+
+.nav-links-contact i {
+  display: none;
+}
+
+.header-contact nav i {
+  display: none;
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling form-control Class */
+.form-control {
+  text-align: left;
+  margin-bottom: 25px;
+  color: #3f3f3f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling form-control Label */
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  padding: 10px;
+  display: block;
+  width: 95%;
+}
+
+/* Styling Button */
+button {
+  background-color: #f47174;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 21px;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/*---------------------------------REFERENCE PAGE--------------------------------*/
+
+.header-reference {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    /*Change this to a grey*/ url(../images/pexels-tnarg-3152174.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-reference nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.header-reference nav img {
+  width: 150px;
+}
+
+.nav-links-reference {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links-reference ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links-reference li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links-reference ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s; /*this creates the slow appearance animation look*/
+}
+
+.nav-links-reference ul li:hover::after {
+  /*this allows you to hover over the nav and it shows the lines*/
+  width: 100%;
+}
+
+.text-box-reference {
+  width: 90%;
+  color: #fff; /*Change this color in the future possible*/
+  position: absolute; /*may need to be relative*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box-reference h1 {
+  font-size: 3em;
+}
+
+.text-box-reference p {
+  margin: 10px 0 40px; /*may need to change to be more relative*/
+  font-size: 14px;
+  color: #fff;
+}
+
+/*this is the link box, rename this in the future*/
+.hero-btn-reference {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 16px;
+  background: transparent;
+  position: relative;
+  cursor: pointer; /*this changes the mouse when hovered over the link box*/
+}
+
+/*this trick lets you change the color of the box when being hovered over the link*/
+.hero-btn-reference:hover {
+  border: 1px solid #f47174;
+  background: #f47174;
+  transition: 1s;
+}
+
+.nav-links-reference i {
+  display: none;
+}
+
+.header-reference nav i {
+  display: none;
+}
+
+/*Reference Page*/
+.text-box table {
+  border-spacing: 1.25em;
+  border-collapse: separate;
+  text-align: left;
+}

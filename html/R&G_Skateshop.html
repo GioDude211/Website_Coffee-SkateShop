@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+Final Project
+Rise & Grind Coffee Skate Shop
+   
+   Author:Giovanni Vecchione
+   Date:5/10/22
+   
+   Filename: R&G_Skateshop.html
+-->
+    <title>Rise & Grind: Coffee and Skateshop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <link href="../css/vecchionegiovanni_styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="../js/js_finalProject.js"></script>
+    <!--this allows you to import fonts from google-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <!--this link allows you to connect to the icons website-->
+    <script
+      src="https://kit.fontawesome.com/dd0f41640f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section class="header-skateshop">
+      <!-- Navbar text is dark and background is light -->
+      <nav>
+        <!--there is supposed to be a href right next to the a, may not need it-->
+        <a><img src="../images/RG_logo_white-removebg-preview.png" /></a>
+        <div class="nav-links-skateshop" id="navLinks-skateshop">
+          <!--this allows you to use th close icon, from the awesome icons website-->
+          <i class="fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="../html/RG_Home.html">HOME</a></li>
+            <!--Eventually add page links of other html pages-->
+            <li><a href="../html/R&G_Coffee.html">COFFEE</a></li>
+            <li><a href="../html/R&G_Skateshop.html">SKATESHOP</a></li>
+            <li><a href="../html/R&G_Contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <!--icons can be placed anywhere with <i>, however having trouble displaying them-->
+        <i class="fa-regular fa-chart-bar" onclick="showMenu()"></i>
+      </nav>
+      <!--use <br> to help clean up paragraphs-->
+      <div class="text-box-skateshop">
+        <h1>Skateboards & Accessories</h1>
+        <p>Endless varieties, and the quality to match!</p>
+      </div>
+    </section>
+
+    <!---Skateboard Brands-->
+    <section class="skateboards">
+      <h1>Skateboard Brands</h1>
+
+      <div class="row">
+        <!--This will hold the content / creates the three columns of text-->
+        <div class="skateboards-col">
+          <img src="../images/pexels-bran-sodre-2086530.jpg" />
+          <div class="layer">
+            <h3>ELEMENT</h3>
+          </div>
+        </div>
+        <div class="skateboards-col">
+          <img src="../images/SkateSC.jpg" />
+          <div class="layer">
+            <h3>Santa Cruz</h3>
+          </div>
+        </div>
+        <div class="skateboards-col">
+          <img src="../images/SkateTH.jpg" />
+          <div class="layer">
+            <h3>Tony Hawk</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!--Scrolling bar-->
+    <section class="scrollbar">
+    <div class="super-container">
+      <div class="container">
+        <!-- Carousel container -->
+        <div class="carousel-container">
+    
+          <!-- Full-width images with number and caption text -->
+          <div class="myCarousel fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="../images/Skateboard1.jpg" style="width:100%">
+            <div class="text">TRUCKS</div>
+          </div>
+    
+          <div class="myCarousel fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="../images/skateboard6.jpg" style="width:100%">
+            <div class="text">DECKS</div>
+          </div>
+    
+          <div class="myCarousel fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="../images/skateboard3.jpg" style="width:100%">
+            <div class="text">WHEELS</div>
+          </div>
+
+          <div class="myCarousel fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="../images/skateboard2.jpg" style="width:100%">
+            <div class="text">BEARINGS</div>
+          </div>
+    
+          <div class="myCarousel fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="../images/Skateboard5.jpg" style="width:100%">
+            <div class="text">GRIP TAPE</div>
+          </div>
+    
+          <div class="myCarousel fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="../images/skateboard7.jpg" style="width:100%">
+            <div class="text">SALES</div>
+          </div>
+    
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+      </section>
+      
+    <!--Footer-->
+    <section class="footer">
+      <nav>
+        <div class="footer-bar">
+          <ul>
+            <li><a href="../html/RG_Home.html">HOME</a></li>
+            <li><a href="../html/R&G_Coffee.html">COFFEE</a></li>
+            <li><a href="../html/R&G_Skateshop.html">SKATESHOP</a></li>
+            <li><a href="../html/R&G_Contact.html">CONTACT US</a></li>
+            <li><a>HOURS: MON-SUN 8am - 9pm</a></li>
+            <li><a>Phone: 915-704-9999</a></li>
+          </ul>
+        </div>
+        <p>12800 Turtle Rock Rd Austin, Tx 78729</p>
+      </nav>
+    </section>
+  </body>
+</html>

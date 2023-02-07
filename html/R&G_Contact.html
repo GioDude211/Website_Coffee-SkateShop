@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+Final Project
+Rise & Grind Coffee Skate Shop
+   
+   Author:Giovanni Vecchione
+   Date:5/10/22
+   
+   Filename: R&G_Contact.html
+-->
+    <title>Rise & Grind: Coffee and Skateshop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <link href="../css/vecchionegiovanni_styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="../js/js_finalProject.js"></script>
+
+    <!--this allows you to import fonts from google-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <!--this link allows you to connect to the icons website-->
+    <script
+      src="https://kit.fontawesome.com/dd0f41640f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section class="header-contact">
+      <!-- Navbar text is dark and background is light -->
+      <nav>
+        <!--there is supposed to be a href right next to the a, may not need it-->
+        <a><img src="../images/RG_logo_white-removebg-preview.png" /></a>
+        <div class="nav-links-contact" id="navLinks">
+          <!--this allows you to use th close icon, from the awesome icons website-->
+          <i class="fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="../html/RG_Home.html">HOME</a></li>
+            <li><a href="../html/R&G_Coffee.html">COFFEE</a></li>
+            <li><a href="../html/R&G_Skateshop.html">SKATESHOP</a></li>
+            <li><a href="../html/R&G_Contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <!--icons can be placed anywhere with <i>, however having trouble displaying them-->
+        <i class="fa-regular fa-chart-bar" onclick="showMenu()"></i>
+      </nav>
+
+      <!--use <br> to help clean up paragraphs-->
+      <div class="text-box-contact">
+        <h1>We want to hear from you!</h1>
+
+        <!---------SURVEY---------------->
+    <form id="form">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+      </div>
+
+    </section>
+
+
+    <!-----------Footer----------->
+    <section class="footer">
+      <nav>
+        <div class="footer-bar">
+          <ul>
+            <li><a href="../html/RG_Home.html">HOME</a></li>
+            <li><a href="../html/R&G_Coffee.html">COFFEE</a></li>
+            <li><a href="../html/R&G_Skateshop.html">SKATESHOP</a></li>
+            <li><a href="../html/R&G_Contact.html">CONTACT US</a></li>
+            <li><a>HOURS: MON-SUN 8am - 9pm</a></li>
+            <li><a>Phone: 915-704-9999</a></li>
+          </ul>
+        </div>
+        <p>12800 Turtle Rock Rd Austin, Tx 78729</p>
+      </nav>
+    </section>
+
+
+<!-- JavaScript Toggle Menu
+      this allows you to click the nav bar open and close in theory,
+       testing this out due to java. Linked as onclick on the nav i icons
+
+       id identified is navLinks which is in the div element
+      -->
+
+      <script>
+        var navLinks = document.getElementById("navLinks");
+  
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+  
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      </script>
+
+
+</html>
